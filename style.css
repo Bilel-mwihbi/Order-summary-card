@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+/* CSS reset*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+}
+body {
+    margin: 0;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img {
+    display: block; 
+    max-width: 100%;
+}
+body {
+    display: grid;
+    place-content: center;
+    font-size: 1rem;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: contain;
+}
+main {
+    margin-inline: 1.25rem;
+}
+section {
+    max-width: 375px;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1.35rem;
+    box-shadow: 0px 15px 25px 0px var(--pale-blue); 
+}
+.order-component {
+    padding: 1.25rem;
+}
+.order-header {
+    font-weight: 900;
+    margin-top: 0.5rem;
+    color: var(--dark-blue);
+}
+.order-desc {
+    margin-block: 1.5rem;
+    color: var(--desaturated-blue);
+}
+.order-plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-block: 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: var(--very-pale-blue);
+}
+.order-plans img + div{ 
+    flex: 1;
+    text-align: start;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+.order-plans span {
+    font-weight: initial;
+    color: var(--desaturated-blue);
+}
+.order-plans div:last-child {
+    align-self: center;
+}
+.change-btn {
+    font-weight: 900;
+    color: var(--bright-blue);
+    transition: opacity 250ms;
+}
+.change-btn:hover {
+    opacity: 0.8;
+}
+.buttons-links {
+    margin-block: 1.5rem;
+}
+.order-btns > * {
+    display: block;
+    text-decoration: none;
+    margin-block: 1rem;
+} 
+.order-btns .pay {
+    padding: 0.75rem 0.75rem;
+    color: white;
+    font-weight: 900; 
+    cursor: pointer;
+    border-radius: 0.4rem;
+    border: 1px solid var(--bright-blue);
+    background-color: var(--bright-blue);
+    box-shadow: 0px 7px 30px 0px var(--bright-blue);
+    transition: opacity 250ms;
+}
+.order-btns .pay:hover {
+    opacity: 0.8;
+}
+.order-btns .cancel {
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    transition: color 250ms;
+}
+.order-btns .cancel:hover {
+    color: initial;
+}
+@media only screen and (min-width: 30rem) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+}
